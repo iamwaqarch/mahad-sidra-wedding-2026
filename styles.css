@@ -162,6 +162,85 @@ button { font: inherit; }
 .hotspot--contact-one { top: 45.6%; }
 .hotspot--contact-two { top: 62.4%; }
 
+/* These narrow crops apply the approved button palette without changing the locked source JPEGs. */
+.entry-date-retheme,
+.mehndi-map-retheme,
+.barat-map-retheme,
+.walima-map-retheme {
+  position: absolute;
+  z-index: 1;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.entry-date-retheme {
+  top: 56.57%;
+  left: 19.77%;
+  width: 60.47%;
+  height: 4.42%;
+}
+
+.entry-date-retheme > img {
+  position: absolute;
+  top: -1280.8%;
+  left: -32.69%;
+  display: block;
+  width: 165.38%;
+  height: auto;
+  max-width: none;
+}
+
+.mehndi-map-retheme {
+  top: 82.55%;
+  left: 25%;
+  width: 50%;
+  height: 4.75%;
+}
+
+.mehndi-map-retheme > img {
+  position: absolute;
+  top: -1737.9%;
+  left: -50%;
+  display: block;
+  width: 200%;
+  height: auto;
+  max-width: none;
+}
+
+.barat-map-retheme {
+  top: 85.35%;
+  left: 25%;
+  width: 50%;
+  height: 4.65%;
+}
+
+.barat-map-retheme > img {
+  position: absolute;
+  top: -1835.5%;
+  left: -50%;
+  display: block;
+  width: 200%;
+  height: auto;
+  max-width: none;
+}
+
+.walima-map-retheme {
+  top: 84.9%;
+  left: 25%;
+  width: 50%;
+  height: 4.65%;
+}
+
+.walima-map-retheme > img {
+  position: absolute;
+  top: -1825.8%;
+  left: -50%;
+  display: block;
+  width: 200%;
+  height: auto;
+  max-width: none;
+}
+
 /* This narrowly replaces the baked Share Invitation graphic on Page 10. */
 .share-button-removal {
   position: absolute;
@@ -235,10 +314,12 @@ button { font: inherit; }
 }
 
 .menu-toggle {
-  display: inline-grid;
+  display: inline-flex;
+  flex-direction: column;
   width: 42px;
   height: 42px;
-  place-items: center;
+  align-items: center;
+  justify-content: center;
   border: 1px solid rgba(231, 188, 88, .9);
   border-radius: 50%;
   background: rgba(49, 15, 16, .88);
@@ -263,7 +344,7 @@ button { font: inherit; }
   grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
   gap: 8px;
   align-items: center;
-  min-height: 44px;
+  min-height: 38px;
   transition: opacity 180ms ease;
 }
 
@@ -272,7 +353,7 @@ button { font: inherit; }
 .navigation-slot {
   display: flex;
   min-width: 0;
-  min-height: 44px;
+  min-height: 38px;
   align-items: center;
 }
 
@@ -302,7 +383,7 @@ button { font: inherit; }
   display: inline-flex;
   width: 100%;
   min-width: 0;
-  height: 44px;
+  height: 38px;
   align-items: center;
   justify-content: center;
   padding: 0 8px;
@@ -324,23 +405,35 @@ button { font: inherit; }
 .page-button span { overflow: hidden; text-overflow: ellipsis; }
 
 .designer-credit {
+  display: inline-flex;
+  width: 100%;
+  min-width: 0;
+  height: 38px;
+  align-items: center;
+  justify-content: center;
   max-width: 100%;
   margin: 0;
+  padding: 0 8px;
   overflow: hidden;
-  color: var(--ivory);
+  border: 1px solid rgba(255, 235, 173, .78);
+  border-radius: 999px;
+  background: linear-gradient(135deg, #e7bc58, #c98d2f);
+  color: #28100f;
+  box-shadow: 0 7px 18px rgba(20, 4, 7, .25), inset 0 1px rgba(255, 248, 215, .55);
   font-family: Georgia, "Times New Roman", serif;
-  font-size: clamp(7px, min(2.1vw, 1.05svh), 9px);
+  font-size: clamp(7px, min(2.05vw, 1svh), 9px);
   font-style: italic;
-  font-weight: 700;
+  font-weight: 800;
   letter-spacing: .01em;
   line-height: 1.1;
-  text-shadow: 0 1px 4px rgba(0, 0, 0, .58);
+  text-align: center;
+  text-shadow: none;
   text-overflow: clip;
   white-space: nowrap;
 }
 
-.designer-credit--first { text-align: left; }
-.designer-credit--last { text-align: right; }
+.designer-credit--first,
+.designer-credit--last { text-align: center; }
 
 .menu-toggle:focus-visible,
 .page-button:focus-visible,
