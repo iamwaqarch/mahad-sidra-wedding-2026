@@ -1,0 +1,138 @@
+/*
+  Pixel-safe display shell. The 860 × 1720 locked JPEGs are the only visual
+  artwork. This stylesheet never crops, filters, animates, or visually overlays them.
+*/
+:root {
+  --mobile-artboard-width: 430px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  min-width: 0;
+  margin: 0;
+  padding: 0;
+  background: #1e0b0c;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.invitation {
+  width: 100%;
+  max-width: var(--mobile-artboard-width);
+  margin: 0 auto;
+  padding: 0;
+}
+
+.invitation-page {
+  position: relative;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  line-height: 0;
+}
+
+.invitation-page > img {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-width: none;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  vertical-align: top;
+}
+
+/* Touch areas sit above the baked artwork but have no visual output. */
+.hotspot {
+  position: absolute;
+  z-index: 1;
+  display: block;
+  appearance: none;
+  -webkit-appearance: none;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  background: transparent;
+  color: transparent;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
+}
+
+.hotspot--enter {
+  top: 82.2%;
+  left: 30.4%;
+  width: 39.2%;
+  height: 5.0%;
+}
+
+.hotspot--mehndi-map {
+  top: 82.8%;
+  left: 25.4%;
+  width: 49.2%;
+  height: 5.0%;
+}
+
+.hotspot--barat-map {
+  top: 85.4%;
+  left: 25.4%;
+  width: 49.2%;
+  height: 5.0%;
+}
+
+.hotspot--walima-map {
+  top: 85.0%;
+  left: 25.4%;
+  width: 49.2%;
+  height: 5.0%;
+}
+
+.hotspot--contact-one,
+.hotspot--contact-two {
+  left: 21.7%;
+  width: 56.6%;
+  height: 9.8%;
+}
+
+.hotspot--contact-one {
+  top: 45.6%;
+}
+
+.hotspot--contact-two {
+  top: 62.4%;
+}
+
+/* This narrowly replaces the baked Share Invitation graphic on Page 10. */
+.share-button-removal {
+  position: absolute;
+  top: 82.8%;
+  left: 25.2%;
+  z-index: 1;
+  width: 49.6%;
+  height: 5.6%;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.share-button-removal > img {
+  position: absolute;
+  top: -1483.3%;
+  left: -50.8%;
+  display: block;
+  width: 201.6%;
+  height: auto;
+  max-width: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
