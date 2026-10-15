@@ -6,8 +6,9 @@
     <meta name="theme-color" content="#240e0e">
     <meta name="description" content="Mahad Aslam and Sidra Arif's wedding invitation.">
     <title>Mahad &amp; Sidra — Wedding Invitation</title>
-    <link rel="stylesheet" href="styles.css?v=20261016-theme2">
-    <script defer src="script.js?v=20261016-navigation"></script>
+    <link rel="stylesheet" href="styles.css?v=20261016-countdown-history">
+    <script defer src="data.js?v=20261016-countdown-barat"></script>
+    <script defer src="script.js?v=20261016-countdown-history"></script>
   </head>
   <body>
     <main class="invitation-app" aria-label="Mahad Aslam and Sidra Arif wedding invitation">
@@ -25,6 +26,12 @@
 
         <section id="couple" class="invitation-page" data-title="Mahad &amp; Sidra" aria-label="Page 2 of 11: Mahad and Sidra" aria-hidden="true" tabindex="-1" inert>
           <img src="02-hero-countdown.jpeg" width="860" height="1720" alt="Mahad Aslam and Sidra Arif with celebration countdown.">
+          <div class="countdown-number-repair" aria-hidden="true">
+            <img src="02-hero-countdown-live-repair.png" width="887" height="1774" alt="">
+          </div>
+          <output class="live-countdown" id="live-countdown" aria-live="polite" aria-label="Countdown to celebration">
+            <span data-countdown-value="days">00</span><span class="live-countdown__separator" aria-hidden="true">:</span><span data-countdown-value="hours">00</span><span class="live-countdown__separator" aria-hidden="true">:</span><span data-countdown-value="minutes">00</span><span class="live-countdown__separator" aria-hidden="true">:</span><span data-countdown-value="seconds">00</span>
+          </output>
         </section>
 
         <section id="journey" class="invitation-page" data-title="Wedding Journey" aria-label="Page 3 of 11: Wedding Journey" aria-hidden="true" tabindex="-1" inert>

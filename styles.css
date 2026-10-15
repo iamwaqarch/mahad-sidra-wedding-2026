@@ -129,6 +129,17 @@ button { font: inherit; }
 .invitation-page.is-exiting--next { transform: translate3d(-4%, 0, 0); }
 .invitation-page.is-exiting--previous { transform: translate3d(4%, 0, 0); }
 
+/* History gestures are owned by the browser. Snap the restored page into its
+   settled position before the next frame so an interrupted edge-swipe cannot
+   preserve a translated invitation page. */
+.invitation-stage.is-history-sync .invitation-page {
+  transition: none !important;
+}
+
+.invitation-stage.is-history-sync::after {
+  animation: none !important;
+}
+
 .invitation-page > img {
   display: block;
   width: 100%;
@@ -166,7 +177,8 @@ button { font: inherit; }
 .entry-date-retheme,
 .mehndi-map-retheme,
 .barat-map-retheme,
-.walima-map-retheme {
+.walima-map-retheme,
+.countdown-number-repair {
   position: absolute;
   z-index: 1;
   overflow: hidden;
@@ -240,6 +252,48 @@ button { font: inherit; }
   height: auto;
   max-width: none;
 }
+
+/* Page 2 retains its locked artwork while the former static digits are replaced by a live countdown. */
+.countdown-number-repair {
+  top: 78.4%;
+  left: 16.3%;
+  width: 67.4%;
+  height: 5.1%;
+}
+
+.countdown-number-repair > img {
+  position: absolute;
+  top: -1537.3%;
+  left: -24.18%;
+  display: block;
+  width: 148.37%;
+  height: auto;
+  max-width: none;
+}
+
+.live-countdown {
+  position: absolute;
+  z-index: 2;
+  top: 79.4%;
+  left: 21%;
+  width: 58%;
+  height: 4%;
+  display: grid;
+  grid-template-columns: 1fr .25fr 1fr .25fr 1fr .25fr 1fr;
+  align-items: center;
+  color: #5b2a25;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(25px, min(7.8vw, 3.9svh), 34px);
+  font-variant-numeric: tabular-nums;
+  font-weight: 600;
+  letter-spacing: .015em;
+  line-height: 1;
+  pointer-events: none;
+  text-align: center;
+  text-shadow: 0 1px rgba(255, 248, 220, .28);
+}
+
+.live-countdown__separator { font-weight: 700; }
 
 /* This narrowly replaces the baked Share Invitation graphic on Page 10. */
 .share-button-removal {
