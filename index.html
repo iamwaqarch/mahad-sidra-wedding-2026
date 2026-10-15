@@ -7,62 +7,118 @@
     <meta name="description" content="Mahad Aslam and Sidra Arif's wedding invitation.">
     <title>Mahad &amp; Sidra — Wedding Invitation</title>
     <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
   </head>
   <body>
-    <main class="invitation" aria-label="Mahad Aslam and Sidra Arif wedding invitation">
-      <!-- The approved final JPEGs are the visual source of truth. -->
-      <section id="opening" class="invitation-page" aria-label="Invitation opening">
-        <img src="01-entry.jpeg" width="860" height="1720" alt="Wedding invitation opening for Mahad Aslam and Sidra Arif.">
-        <a class="hotspot hotspot--enter" href="#couple" aria-label="Enter invitation"></a>
-      </section>
+    <main class="invitation-app" aria-label="Mahad Aslam and Sidra Arif wedding invitation">
+      <div class="invitation-stage">
+        <!-- The approved final JPEGs remain the visual source of truth. -->
+        <section id="opening" class="invitation-page is-active" data-title="Welcome" aria-label="Page 1 of 11: Welcome" aria-hidden="false" tabindex="-1">
+          <img src="01-entry.jpeg" width="860" height="1720" alt="Wedding invitation opening for Mahad Aslam and Sidra Arif.">
+          <div class="entry-button-removal" aria-hidden="true">
+            <img src="01-entry-enter-removed-repair.png" width="887" height="1774" alt="">
+          </div>
+        </section>
 
-      <section id="couple" class="invitation-page" aria-label="Couple and celebration countdown">
-        <img src="02-hero-countdown.jpeg" width="860" height="1720" alt="Mahad Aslam and Sidra Arif with celebration countdown.">
-      </section>
+        <section id="couple" class="invitation-page" data-title="Mahad &amp; Sidra" aria-label="Page 2 of 11: Mahad and Sidra" aria-hidden="true" tabindex="-1" inert>
+          <img src="02-hero-countdown.jpeg" width="860" height="1720" alt="Mahad Aslam and Sidra Arif with celebration countdown.">
+        </section>
 
-      <section id="journey" class="invitation-page" aria-label="Wedding journey">
-        <img src="03-wedding-journey.jpeg" width="860" height="1720" alt="Wedding journey with Mehndi, Barat, and Walima.">
-      </section>
+        <section id="journey" class="invitation-page" data-title="Wedding Journey" aria-label="Page 3 of 11: Wedding Journey" aria-hidden="true" tabindex="-1" inert>
+          <img src="03-wedding-journey.jpeg" width="860" height="1720" alt="Wedding journey with Mehndi, Barat, and Walima.">
+        </section>
 
-      <section id="mehndi" class="invitation-page" aria-label="Mehndi details">
-        <img src="04-mehndi.jpeg" width="860" height="1720" alt="Mehndi event details.">
-        <a class="hotspot hotspot--mehndi-map" href="https://maps.app.goo.gl/Kn7wLwVVS8rxh9KG6" target="_blank" rel="noopener" aria-label="Open Mehndi venue in Google Maps"></a>
-      </section>
+        <section id="mehndi" class="invitation-page" data-title="Mehndi" aria-label="Page 4 of 11: Mehndi" aria-hidden="true" tabindex="-1" inert>
+          <img src="04-mehndi.jpeg" width="860" height="1720" alt="Mehndi event details.">
+          <a class="hotspot hotspot--mehndi-map" href="https://maps.app.goo.gl/Kn7wLwVVS8rxh9KG6" target="_blank" rel="noopener" aria-label="Open Mehndi venue in Google Maps"></a>
+        </section>
 
-      <section id="female-mehndi-hosts" class="invitation-page" aria-label="Ladies of the Mehndi">
-        <img src="05-female-mehndi-hosts.jpeg" width="860" height="1720" alt="Ladies of the Mehndi hosts.">
-      </section>
+        <section id="female-mehndi-hosts" class="invitation-page" data-title="Ladies of Mehndi" aria-label="Page 5 of 11: Ladies of Mehndi" aria-hidden="true" tabindex="-1" inert>
+          <img src="05-female-mehndi-hosts.jpeg" width="860" height="1720" alt="Ladies of the Mehndi hosts.">
+        </section>
 
-      <section id="male-mehndi-hosts" class="invitation-page" aria-label="Gentlemen of the Mehndi">
-        <img src="06-male-mehndi-hosts.jpeg" width="860" height="1720" alt="Gentlemen of the Mehndi hosts.">
-      </section>
+        <section id="male-mehndi-hosts" class="invitation-page" data-title="Gentlemen of Mehndi" aria-label="Page 6 of 11: Gentlemen of Mehndi" aria-hidden="true" tabindex="-1" inert>
+          <img src="06-male-mehndi-hosts.jpeg" width="860" height="1720" alt="Gentlemen of the Mehndi hosts.">
+        </section>
 
-      <section id="barat" class="invitation-page" aria-label="Barat details">
-        <img src="07-barat.jpeg" width="860" height="1720" alt="Barat event details.">
-        <a class="hotspot hotspot--barat-map" href="https://maps.app.goo.gl/2ndoWRFfk1gkv2Rq8" target="_blank" rel="noopener" aria-label="Open Barat venue in Google Maps"></a>
-      </section>
+        <section id="barat" class="invitation-page" data-title="Barat" aria-label="Page 7 of 11: Barat" aria-hidden="true" tabindex="-1" inert>
+          <img src="07-barat.jpeg" width="860" height="1720" alt="Barat event details.">
+          <a class="hotspot hotspot--barat-map" href="https://maps.app.goo.gl/2ndoWRFfk1gkv2Rq8" target="_blank" rel="noopener" aria-label="Open Barat venue in Google Maps"></a>
+        </section>
 
-      <section id="walima" class="invitation-page" aria-label="Walima details">
-        <img src="08-walima.jpeg" width="860" height="1720" alt="Walima event details.">
-        <a class="hotspot hotspot--walima-map" href="https://maps.app.goo.gl/2ndoWRFfk1gkv2Rq8" target="_blank" rel="noopener" aria-label="Open Walima venue in Google Maps"></a>
-      </section>
+        <section id="walima" class="invitation-page" data-title="Walima" aria-label="Page 8 of 11: Walima" aria-hidden="true" tabindex="-1" inert>
+          <img src="08-walima.jpeg" width="860" height="1720" alt="Walima event details.">
+          <a class="hotspot hotspot--walima-map" href="https://maps.app.goo.gl/2ndoWRFfk1gkv2Rq8" target="_blank" rel="noopener" aria-label="Open Walima venue in Google Maps"></a>
+        </section>
 
-      <section id="rsvp" class="invitation-page" aria-label="RSVP hosts">
-        <img src="09-rsvp.jpeg" width="860" height="1720" alt="RSVP hosts.">
-      </section>
+        <section id="rsvp" class="invitation-page" data-title="RSVP" aria-label="Page 9 of 11: RSVP" aria-hidden="true" tabindex="-1" inert>
+          <img src="09-rsvp.jpeg" width="860" height="1720" alt="RSVP hosts.">
+        </section>
 
-      <section id="looking-forward" class="invitation-page" aria-label="Looking forward contact details">
-        <img src="10-looking-forward.jpeg" width="860" height="1720" alt="Looking forward contact details.">
-        <div class="share-button-removal" aria-hidden="true">
-          <img src="10-looking-forward-share-removed-repair.png" width="887" height="1774" alt="">
+        <section id="looking-forward" class="invitation-page" data-title="Looking Forward" aria-label="Page 10 of 11: Looking Forward" aria-hidden="true" tabindex="-1" inert>
+          <img src="10-looking-forward.jpeg" width="860" height="1720" alt="Looking forward contact details.">
+          <div class="share-button-removal" aria-hidden="true">
+            <img src="10-looking-forward-share-removed-repair.png" width="887" height="1774" alt="">
+          </div>
+          <a class="hotspot hotspot--contact-one" href="tel:+923206511552" aria-label="Call Mian Zahid at 0320 6511552"></a>
+          <a class="hotspot hotspot--contact-two" href="tel:+923144510014" aria-label="Call Abdullah Aslam at 0314 4510014"></a>
+        </section>
+
+        <section id="closing" class="invitation-page" data-title="With Love" aria-label="Page 11 of 11: With Love" aria-hidden="true" tabindex="-1" inert>
+          <img src="11-closing.jpeg" width="860" height="1720" alt="Wedding invitation closing.">
+          <div class="closing-credit-removal" aria-hidden="true">
+            <img src="11-closing-credit-removed-repair.png" width="887" height="1774" alt="">
+          </div>
+        </section>
+
+        <header class="site-chrome" aria-label="Invitation menu">
+          <button class="menu-toggle" id="menu-toggle" type="button" aria-label="Open invitation menu" aria-controls="invitation-menu" aria-expanded="false">
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+          </button>
+        </header>
+
+        <nav class="page-controls is-first" aria-label="Invitation navigation">
+          <div class="navigation-slot navigation-slot--previous">
+            <button class="page-button back-button" id="back-button" type="button" aria-label="Go to the previous page" hidden>
+              <span id="back-button-label"></span>
+            </button>
+            <p class="designer-credit designer-credit--first" id="first-page-credit">designed with love by Waqar.</p>
+          </div>
+          <output class="page-progress" id="page-progress" aria-live="polite"><span>01</span><span aria-hidden="true">/</span><span>11</span></output>
+          <div class="navigation-slot navigation-slot--forward">
+            <button class="page-button next-button" id="next-button" type="button">
+              <span id="next-button-label">Enter Invitation</span>
+            </button>
+            <p class="designer-credit designer-credit--last" id="last-page-credit" hidden>designed with love by Waqar.</p>
+          </div>
+        </nav>
+      </div>
+
+      <nav class="section-menu" id="invitation-menu" aria-label="Invitation sections" aria-labelledby="menu-heading" aria-modal="true" role="dialog" hidden>
+        <div class="section-menu__panel">
+          <div class="section-menu__header">
+            <p class="section-menu__eyebrow">Mahad &amp; Sidra</p>
+            <h1 id="menu-heading">Explore the invitation</h1>
+            <button class="menu-close" id="menu-close" type="button" aria-label="Close invitation menu">×</button>
+          </div>
+          <div class="section-menu__links">
+            <button type="button" data-page-target="opening"><span>01</span>Welcome</button>
+            <button type="button" data-page-target="couple"><span>02</span>Mahad &amp; Sidra</button>
+            <button type="button" data-page-target="journey"><span>03</span>Wedding Journey</button>
+            <button type="button" data-page-target="mehndi"><span>04</span>Mehndi</button>
+            <button type="button" data-page-target="female-mehndi-hosts"><span>05</span>Ladies of Mehndi</button>
+            <button type="button" data-page-target="male-mehndi-hosts"><span>06</span>Gentlemen of Mehndi</button>
+            <button type="button" data-page-target="barat"><span>07</span>Barat</button>
+            <button type="button" data-page-target="walima"><span>08</span>Walima</button>
+            <button type="button" data-page-target="rsvp"><span>09</span>RSVP</button>
+            <button type="button" data-page-target="looking-forward"><span>10</span>Looking Forward</button>
+            <button type="button" data-page-target="closing"><span>11</span>With Love</button>
+          </div>
         </div>
-        <a class="hotspot hotspot--contact-one" href="tel:+923206511552" aria-label="Call Mian Zahid at 0320 6511552"></a>
-        <a class="hotspot hotspot--contact-two" href="tel:+923144510014" aria-label="Call Abdullah Aslam at 0314 4510014"></a>
-      </section>
-
-      <section id="closing" class="invitation-page" aria-label="Invitation closing">
-        <img src="11-closing.jpeg" width="860" height="1720" alt="Wedding invitation closing.">
-      </section>
+      </nav>
+      <p class="sr-only" id="page-status" aria-live="polite"></p>
     </main>
   </body>
 </html>
